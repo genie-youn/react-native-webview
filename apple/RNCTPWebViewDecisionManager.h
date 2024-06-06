@@ -4,7 +4,7 @@
 
 typedef void (^DecisionBlock)(BOOL);
 
-@interface RNCWebViewDecisionManager : NSObject {
+@interface RNCTPWebViewDecisionManager : NSObject {
     int nextLockIdentifier;
     NSMutableDictionary *decisionHandlers;
 }

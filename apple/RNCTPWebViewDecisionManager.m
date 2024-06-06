@@ -1,14 +1,14 @@
-#import "RNCWebViewDecisionManager.h"
+#import "RNCTPWebViewDecisionManager.h"
 
 
 
-@implementation RNCWebViewDecisionManager
+@implementation RNCTPWebViewDecisionManager
 
 @synthesize nextLockIdentifier;
 @synthesize decisionHandlers;
 
 + (id)getInstance {
-    static RNCWebViewDecisionManager *lockManager = nil;
+    static RNCTPWebViewDecisionManager *lockManager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         lockManager = [[self alloc] init];

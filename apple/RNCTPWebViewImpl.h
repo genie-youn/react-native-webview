@@ -14,23 +14,23 @@
 #import <UIKit/UIScrollView.h>
 #endif  // !TARGET_OS_OSX
 
-#import "RNCWebViewDecisionManager.h"
+#import "RNCTPWebViewDecisionManager.h"
 
-typedef enum RNCWebViewPermissionGrantType : NSUInteger {
-  RNCWebViewPermissionGrantType_GrantIfSameHost_ElsePrompt,
-  RNCWebViewPermissionGrantType_GrantIfSameHost_ElseDeny,
-  RNCWebViewPermissionGrantType_Deny,
-  RNCWebViewPermissionGrantType_Grant,
-  RNCWebViewPermissionGrantType_Prompt
-} RNCWebViewPermissionGrantType;
+typedef enum RNCTPWebViewPermissionGrantType : NSUInteger {
+  RNCTPWebViewPermissionGrantType_GrantIfSameHost_ElsePrompt,
+  RNCTPWebViewPermissionGrantType_GrantIfSameHost_ElseDeny,
+  RNCTPWebViewPermissionGrantType_Deny,
+  RNCTPWebViewPermissionGrantType_Grant,
+  RNCTPWebViewPermissionGrantType_Prompt
+} RNCTPWebViewPermissionGrantType;
 
-@class RNCWebViewImpl;
+@class RNCTPWebViewImpl;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol RNCWebViewDelegate <NSObject>
+@protocol RNCTPWebViewDelegate <NSObject>
 
-- (BOOL)webView:(RNCWebViewImpl *)webView
+- (BOOL)webView:(RNCTPWebViewImpl *)webView
 shouldStartLoadForRequest:(NSMutableDictionary<NSString *, id> *)request
    withCallback:(RCTDirectEventBlock)callback;
 
@@ -45,11 +45,11 @@ shouldStartLoadForRequest:(NSMutableDictionary<NSString *, id> *)request
 @end
 
 #if !TARGET_OS_OSX
-@interface RNCWebViewImpl : RCTView <UIEditMenuInteractionDelegate>
+@interface RNCTPWebViewImpl : RCTView <UIEditMenuInteractionDelegate>
 
 @property (nonatomic, nullable) UIEditMenuInteraction *editMenuInteraction API_AVAILABLE(ios(16.0));
 #else
-@interface RNCWebViewImpl : RCTView
+@interface RNCTPWebViewImpl : RCTView
 #endif // !TARGET_OS_OSX
 
 
@@ -66,7 +66,7 @@ shouldStartLoadForRequest:(NSMutableDictionary<NSString *, id> *)request
 @property (nonatomic, copy) RCTDirectEventBlock onOpenWindow;
 
 
-@property (nonatomic, weak) id<RNCWebViewDelegate> _Nullable delegate;
+@property (nonatomic, weak) id<RNCTPWebViewDelegate> _Nullable delegate;
 @property (nonatomic, copy) NSDictionary * _Nullable source;
 @property (nonatomic, assign) BOOL messagingEnabled;
 @property (nonatomic, copy) NSString * _Nullable injectedJavaScript;
@@ -129,7 +129,7 @@ shouldStartLoadForRequest:(NSMutableDictionary<NSString *, id> *)request
 #endif
 
 #if defined(__IPHONE_OS_VERSION_MAX_ALLOWED) && __IPHONE_OS_VERSION_MAX_ALLOWED >= 150000 /* iOS 15 */
-@property (nonatomic, assign) RNCWebViewPermissionGrantType mediaCapturePermissionGrantType;
+@property (nonatomic, assign) RNCTPWebViewPermissionGrantType mediaCapturePermissionGrantType;
 #endif
 
 #if !TARGET_OS_OSX
