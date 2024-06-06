@@ -1,16 +1,16 @@
-package com.reactnativecommunity.webview.events
+package com.reactnativecommunity.tpwebview.events
 
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.uimanager.events.Event
 import com.facebook.react.uimanager.events.RCTEventEmitter
 
 /**
- * Event emitted when a http error is received from the server.
+ * Event emitted when there is a loading progress event.
  */
-class TopHttpErrorEvent(viewId: Int, private val mEventData: WritableMap) :
-  Event<TopHttpErrorEvent>(viewId) {
+class TopLoadingProgressEvent(viewId: Int, private val mEventData: WritableMap) :
+  Event<TopLoadingProgressEvent>(viewId) {
   companion object {
-    const val EVENT_NAME = "topHttpError"
+    const val EVENT_NAME = "topLoadingProgress"
   }
 
   override fun getEventName(): String = EVENT_NAME
@@ -21,5 +21,4 @@ class TopHttpErrorEvent(viewId: Int, private val mEventData: WritableMap) :
 
   override fun dispatch(rctEventEmitter: RCTEventEmitter) =
     rctEventEmitter.receiveEvent(viewTag, eventName, mEventData)
-
 }

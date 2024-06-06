@@ -1,4 +1,4 @@
-package com.reactnativecommunity.webview;
+package com.reactnativecommunity.tpwebview;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -10,16 +10,16 @@ import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.ViewGroupManager;
 import com.facebook.react.uimanager.annotations.ReactProp;
 import com.facebook.react.views.scroll.ScrollEventType;
-import com.reactnativecommunity.webview.events.TopCustomMenuSelectionEvent;
-import com.reactnativecommunity.webview.events.TopHttpErrorEvent;
-import com.reactnativecommunity.webview.events.TopLoadingErrorEvent;
-import com.reactnativecommunity.webview.events.TopLoadingFinishEvent;
-import com.reactnativecommunity.webview.events.TopLoadingProgressEvent;
-import com.reactnativecommunity.webview.events.TopLoadingStartEvent;
-import com.reactnativecommunity.webview.events.TopMessageEvent;
-import com.reactnativecommunity.webview.events.TopOpenWindowEvent;
-import com.reactnativecommunity.webview.events.TopRenderProcessGoneEvent;
-import com.reactnativecommunity.webview.events.TopShouldStartLoadWithRequestEvent;
+import com.reactnativecommunity.tpwebview.events.TopCustomMenuSelectionEvent;
+import com.reactnativecommunity.tpwebview.events.TopHttpErrorEvent;
+import com.reactnativecommunity.tpwebview.events.TopLoadingErrorEvent;
+import com.reactnativecommunity.tpwebview.events.TopLoadingFinishEvent;
+import com.reactnativecommunity.tpwebview.events.TopLoadingProgressEvent;
+import com.reactnativecommunity.tpwebview.events.TopLoadingStartEvent;
+import com.reactnativecommunity.tpwebview.events.TopMessageEvent;
+import com.reactnativecommunity.tpwebview.events.TopOpenWindowEvent;
+import com.reactnativecommunity.tpwebview.events.TopRenderProcessGoneEvent;
+import com.reactnativecommunity.tpwebview.events.TopShouldStartLoadWithRequestEvent;
 
 import java.util.Map;
 

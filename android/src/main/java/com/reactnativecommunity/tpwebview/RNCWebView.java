@@ -1,4 +1,4 @@
-package com.reactnativecommunity.webview;
+package com.reactnativecommunity.tpwebview;
 
 import android.annotation.SuppressLint;
 import android.graphics.Rect;
@@ -32,8 +32,8 @@ import com.facebook.react.uimanager.events.Event;
 import com.facebook.react.views.scroll.OnScrollDispatchHelper;
 import com.facebook.react.views.scroll.ScrollEvent;
 import com.facebook.react.views.scroll.ScrollEventType;
-import com.reactnativecommunity.webview.events.TopCustomMenuSelectionEvent;
-import com.reactnativecommunity.webview.events.TopMessageEvent;
+import com.reactnativecommunity.tpwebview.events.TopCustomMenuSelectionEvent;
+import com.reactnativecommunity.tpwebview.events.TopMessageEvent;
 
 import org.json.JSONException;
 import org.json.JSONObject;

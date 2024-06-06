@@ -1,4 +1,4 @@
-package com.reactnativecommunity.webview
+package com.reactnativecommunity.tpwebview
 
 import com.facebook.react.bridge.JavaScriptModule
 import com.facebook.react.bridge.WritableMap

@@ -1,4 +1,4 @@
-package com.reactnativecommunity.webview
+package com.reactnativecommunity.tpwebview
 
 import android.content.Context
 import android.graphics.Color

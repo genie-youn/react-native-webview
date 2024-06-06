@@ -1,4 +1,4 @@
-package com.reactnativecommunity.webview;
+package com.reactnativecommunity.tpwebview;
 
 import android.Manifest;
 import android.annotation.TargetApi;
@@ -29,8 +29,8 @@ import com.facebook.react.common.build.ReactBuildConfig;
 import com.facebook.react.modules.core.PermissionAwareActivity;
 import com.facebook.react.modules.core.PermissionListener;
 import com.facebook.react.uimanager.UIManagerHelper;
-import com.reactnativecommunity.webview.events.TopLoadingProgressEvent;
-import com.reactnativecommunity.webview.events.TopOpenWindowEvent;
+import com.reactnativecommunity.tpwebview.events.TopLoadingProgressEvent;
+import com.reactnativecommunity.tpwebview.events.TopOpenWindowEvent;
 
 import java.util.ArrayList;
 import java.util.Collections;

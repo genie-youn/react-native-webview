@@ -1,4 +1,4 @@
-package com.reactnativecommunity.webview;
+package com.reactnativecommunity.tpwebview;
 
 class RNCBasicAuthCredential {
     String username;

@@ -1,16 +1,16 @@
-package com.reactnativecommunity.webview.events
+package com.reactnativecommunity.tpwebview.events
 
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.uimanager.events.Event
 import com.facebook.react.uimanager.events.RCTEventEmitter
 
 /**
- * Event emitted when there is a loading progress event.
+ * Event emitted when the WebView opens a new Window (i.e: target=_blank)
  */
-class TopCustomMenuSelectionEvent(viewId: Int, private val mEventData: WritableMap) :
-  Event<TopCustomMenuSelectionEvent>(viewId) {
+class TopOpenWindowEvent(viewId: Int, private val mEventData: WritableMap) :
+  Event<TopOpenWindowEvent>(viewId) {
   companion object {
-    const val EVENT_NAME = "topCustomMenuSelection"
+    const val EVENT_NAME = "topOpenWindow"
   }
 
   override fun getEventName(): String = EVENT_NAME
@@ -21,4 +21,5 @@ class TopCustomMenuSelectionEvent(viewId: Int, private val mEventData: WritableM
 
   override fun dispatch(rctEventEmitter: RCTEventEmitter) =
     rctEventEmitter.receiveEvent(viewTag, eventName, mEventData)
+
 }
