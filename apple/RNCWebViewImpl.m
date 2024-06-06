@@ -815,11 +815,20 @@ RCTAutoInsetsProtocol>
   // Check for a static html source first
   NSString *html = [RCTConvert NSString:_source[@"html"]];
   if (html) {
+    NSURL *blank = [NSURL URLWithString:@"about:blank"];
+    [_webView loadRequest:[NSURLRequest requestWithURL:blank]];
+
     NSURL *baseURL = [RCTConvert NSURL:_source[@"baseUrl"]];
     if (!baseURL) {
       baseURL = [NSURL URLWithString:@"about:blank"];
     }
-    [_webView loadHTMLString:html baseURL:baseURL];
+    __weak typeof(self) weakSelf = self;
+    dispatch_async(dispatch_get_main_queue(), ^{
+      __strong typeof(weakSelf) strongSelf = weakSelf;
+      if (strongSelf) {
+        [strongSelf->_webView loadHTMLString:html baseURL:baseURL];
+      }
+    });
     return;
   }
   // Add cookie for subsequent resource requests sent by page itself, if cookie was set in headers on WebView
