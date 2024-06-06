@@ -33,7 +33,7 @@ val invalidCharRegex = "[\\\\/%\"]".toRegex()
 
 class RNCWebViewManagerImpl {
     companion object {
-        const val NAME = "RNCWebView"
+        const val NAME = "RNCTPWebView"
     }
 
     private val TAG = "RNCWebViewManagerImpl"
