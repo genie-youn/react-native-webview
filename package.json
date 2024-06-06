@@ -86,7 +86,7 @@
     "src",
     "index.js",
     "index.d.ts",
-    "react-native-webview.podspec",
+    "react-native-webview-patch-genie.podspec",
     "react-native.config.js"
   ],
   "codegenConfig": {
